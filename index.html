@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeFi Quest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="start-screen">
+        <h1>🧙‍♂️ Welcome to the DeFi Quest</h1>
+        <p>Choose Your Class:</p>
+        <button onclick="chooseClass('Wizard')">Wizard</button>
+        <p><em>Wizards master spells of DeFi protocols and navigate complexity with magic.</em></p>
+        <button onclick="chooseClass('Rogue')">Rogue</button>
+        <p><em>Rogues are stealthy, find hidden airdrops, and exploit yield opportunities.</em></p>
+    </div>
+
+    <div id="quest-screen" style="display:none;">
+        <h2>Chosen Class: <span id="chosen-class"></span></h2>
+        <h2>Quest 1: The Awakening</h2>
+
+        <p>What is DeFi?</p>
+        <button onclick="checkAnswer(this, false)">A bank</button>
+        <button onclick="checkAnswer(this, false)">A game</button>
+        <button onclick="checkAnswer(this, true)">Finance without banks</button>
+
+        <p>What is Web3?</p>
+        <button onclick="checkAnswer(this, false)">Just a browser</button>
+        <button onclick="checkAnswer(this, true)">You own your assets</button>
+        <button onclick="checkAnswer(this, false)">Facebook 3.0</button>
+
+        <p><input type="checkbox" checked> Quest Complete!</p>
+        <button onclick="nextQuest()">Next Quest</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
