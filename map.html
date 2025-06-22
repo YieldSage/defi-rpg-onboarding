@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DeFi RPG • Map</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white font-press-start flex flex-col items-center p-4">
+  <header class="mb-4 w-full flex justify-between">
+    <div class="space-x-4">
+      <a href="map.html" class="text-xs underline">Map</a>
+      <a href="badges.html" class="text-xs underline">Badges</a>
+      <a href="reset.html" class="text-xs underline text-red-400">Reset</a>
+    </div>
+    <div id="progressText" class="text-xs"></div>
+  </header>
+  <div id="mapContainer" class="relative bg-gray-700 w-full max-w-xl h-80 rounded">
+    <div id="sprite" class="absolute w-4 h-4 bg-cyan-400 rounded transition-transform"></div>
+  </div>
+  <footer class="mt-4 text-xs">© 2025 DeFi RPG</footer>
+  <script src="script.js"></script>
+</body>
+</html>

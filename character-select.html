@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DeFi RPG • Character Select</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white font-press-start min-h-screen p-6">
+  <header class="flex justify-between items-center mb-6">
+    <h1 class="text-xl">Choose Your Class</h1>
+    <a href="./index.html" class="text-xs underline">Back</a>
+  </header>
+  <main>
+    <div class="grid grid-cols-2 sm:grid-cols-1 gap-4">
+      <div class="border border-gray-600 p-4 rounded bg-gray-800">
+        <h2 class="text-xl">🛡 Liquidity Knight</h2>
+        <p class="text-xs border border-gray-600 p-2 mt-2">
+          Liquidity Knights guard the pools of assets, ensuring everyone can trade smoothly.
+          They master the balance of supply and demand, protecting the realm’s wealth.
+        </p>
+        <button onclick="selectClass('Liquidity Knight')"
+                class="mt-3 bg-blue-600 px-4 py-2 rounded hover:bg-blue-700 w-full">
+          Select
+        </button>
+      </div>
+      <div class="border border-gray-600 p-4 rounded bg-gray-800">
+        <h2 class="text-xl">🧙 Yield Mage</h2>
+        <p class="text-xs border border-gray-600 p-2 mt-2">
+          Yield Mages conjure returns from thin air, dabbling in farming spells and protocol enchantments
+          to generate passive income for their allies.
+        </p>
+        <button onclick="selectClass('Yield Mage')"
+                class="mt-3 bg-blue-600 px-4 py-2 rounded hover:bg-blue-700 w-full">
+          Select
+        </button>
+      </div>
+      <div class="border border-gray-600 p-4 rounded bg-gray-800">
+        <h2 class="text-xl">🗡 Governance Rogue</h2>
+        <p class="text-xs border border-gray-600 p-2 mt-2">
+          Governance Rogues slip between DAOs, casting votes in secret councils
+          and steering decisions for the good (or mischief) of the realm.
+        </p>
+        <button onclick="selectClass('Governance Rogue')"
+                class="mt-3 bg-blue-600 px-4 py-2 rounded hover:bg-blue-700 w-full">
+          Select
+        </button>
+      </div>
+      <div class="border border-gray-600 p-4 rounded bg-gray-800">
+        <h2 class="text-xl">⛪ Stablecoin Cleric</h2>
+        <p class="text-xs border border-gray-600 p-2 mt-2">
+          Stablecoin Clerics bless assets with peg protection, ensuring minimal volatility
+          and providing safe havens in turbulent markets.
+        </p>
+        <button onclick="selectClass('Stablecoin Cleric')"
+                class="mt-3 bg-blue-600 px-4 py-2 rounded hover:bg-blue-700 w-full">
+          Select
+        </button>
+      </div>
+    </div>
+  </main>
+  <footer class="mt-6 text-center text-xs">© 2025 DeFi RPG</footer>
+  <script>
+    function selectClass(name) {
+      localStorage.setItem('defiClass', name);
+      localStorage.setItem('completedQuests', JSON.stringify([]));
+      localStorage.setItem('earnedBadges', JSON.stringify([]));
+      window.location.href = 'map.html';
+    }
+  </script>
+</body>
+</html>
