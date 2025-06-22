@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DeFi RPG Onboarding</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-container">
+    <h1>🧙 Welcome to the DeFi Quest</h1>
+    <p>Select your class to begin:</p>
+    <button onclick="startGame('Wizard')">Wizard</button>
+    <button onclick="startGame('Rogue')">Rogue</button>
+    <div id="quest" style="display:none;">
+      <h2 id="quest-title">Quest 1: The Awakening</h2>
+      <p>What is DeFi?</p>
+      <ul id="question1">
+        <li><button onclick="checkAnswer(1, this)">A bank</button></li>
+        <li><button onclick="checkAnswer(1, this)">A game</button></li>
+        <li><button onclick="checkAnswer(1, this, true)">Finance without banks</button></li>
+      </ul>
+      <p>What is Web3?</p>
+      <ul id="question2">
+        <li><button onclick="checkAnswer(2, this)">Just a browser</button></li>
+        <li><button onclick="checkAnswer(2, this, true)">You own your assets</button></li>
+        <li><button onclick="checkAnswer(2, this)">Facebook 3.0</button></li>
+      </ul>
+      <div id="complete-section" style="display:none;">
+        <p>✅ Quest Complete!</p>
+        <button onclick="nextQuest()">Next Quest</button>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
