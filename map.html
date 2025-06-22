@@ -1,26 +1,26 @@
-<!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>DeFi Quest • Map</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <script defer src="js/data.js"></script>
-  <script defer src="js/storage.js"></script>
-  <script defer src="js/hud.js"></script>
-  <script defer src="js/map.js"></script>
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DeFi Quest • World Map</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/data.js"></script>
+<script defer src="js/storage.js"></script>
+<script defer src="js/hud.js"></script>
+<script defer src="js/map.js"></script>
 </head>
 <body class="bg-slate-900 text-white min-h-screen p-6">
-  <div class="rpg-hud" id="hud"></div>
-
-  <h1 class="text-2xl font-bold mb-4">World Map</h1>
-  <div class="w-full bg-slate-700 h-3 rounded mb-6">
-    <div id="progressBar" class="bg-emerald-400 h-3 rounded"></div>
+  <div id="hud" class="rpg-hud"></div>
+  <h1 class="text-3xl font-extrabold mb-6">🌍 World Map</h1>
+  <div class="w-full bg-slate-700 h-3 rounded mb-8">
+    <div id="progressBar" class="bg-emerald-400 h-3 rounded transition-all"></div>
   </div>
-
-  <div id="mapGrid" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+  <div id="mapGrid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"></div>
 
   <template id="mapTileTpl">
-    <button class="rpg-tile disabled:opacity-30"></button>
+    <button class="rpg-tile w-full h-32 flex items-center justify-center text-center">
+      <span></span>
+    </button>
   </template>
 </body>
 </html>
