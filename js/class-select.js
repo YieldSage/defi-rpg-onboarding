@@ -1,1 +1,0 @@
-function selectClass(cls) { localStorage.setItem('class', cls); window.location.href='quest1.html'; }

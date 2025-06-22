@@ -1,1 +1,0 @@
-function markComplete() { alert('Quest Complete!'); }
