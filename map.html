@@ -4,23 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DeFi RPG • Map</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"></script>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { font-family: 'Press Start 2P', cursive; }
+    #mapContainer {
+      background: url('tiles-map.png') no-repeat center/cover;
+    }
+  </style>
 </head>
-<body class="bg-gray-900 text-white font-press-start flex flex-col items-center p-4">
-  <header class="mb-4 w-full flex justify-between">
-    <div class="space-x-4">
-      <a href="map.html" class="text-xs underline">Map</a>
-      <a href="badges.html" class="text-xs underline">Badges</a>
-      <a href="reset.html" class="text-xs underline text-red-400">Reset</a>
-    </div>
+<body class="bg-gray-900 text-white flex flex-col items-center p-4 min-h-screen">
+  <!-- Navbar + Progress -->
+  <header class="w-full flex justify-between items-center mb-4">
+    <nav class="space-x-4 text-xs">
+      <a href="map.html" class="underline">Map</a>
+      <a href="badges.html" class="underline">Badges</a>
+      <a href="reset.html" class="underline text-red-400">Reset</a>
+    </nav>
     <div id="progressText" class="text-xs"></div>
   </header>
-  <div id="mapContainer" class="relative bg-gray-700 w-full max-w-xl h-80 rounded">
-    <div id="sprite" class="absolute w-4 h-4 bg-cyan-400 rounded transition-transform"></div>
+
+  <!-- Map Area -->
+  <div id="mapContainer"
+       class="relative w-full max-w-2xl h-80 rounded-lg shadow-lg overflow-hidden">
+    <div id="sprite"
+         class="absolute w-4 h-4 bg-cyan-400 rounded-full transition-transform"></div>
   </div>
-  <footer class="mt-4 text-xs">© 2025 DeFi RPG</footer>
+
+  <footer class="mt-6 text-center text-xs">© 2025 DeFi RPG</footer>
   <script src="script.js"></script>
 </body>
 </html>

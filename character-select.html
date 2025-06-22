@@ -1,67 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DeFi RPG • Character Select</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Press Start 2P', cursive; }
+  </style>
 </head>
-<body class="bg-gray-900 text-white font-press-start min-h-screen p-6">
-  <header class="flex justify-between items-center mb-6">
-    <h1 class="text-xl">Choose Your Class</h1>
-    <a href="./index.html" class="text-xs underline">Back</a>
+<body class="bg-gray-900 text-white min-h-screen p-6">
+  <!-- Nav / Back button -->
+  <header class="flex justify-between items-center mb-8">
+    <h1 class="text-2xl">Choose Your Class</h1>
+    <a href="index.html" class="text-xs underline">Back</a>
   </header>
-  <main>
-    <div class="grid grid-cols-2 sm:grid-cols-1 gap-4">
+
+  <!-- Grid container: 1 col on mobile, 2 cols >=640px -->
+  <main class="max-w-4xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <!-- Liquidity Knight -->
       <div class="border border-gray-600 p-4 rounded bg-gray-800">
-        <h2 class="text-xl">🛡 Liquidity Knight</h2>
-        <p class="text-xs border border-gray-600 p-2 mt-2">
+        <h2 class="text-xl mb-2">🛡 Liquidity Knight</h2>
+        <p class="text-xs border border-gray-600 p-2">
           Liquidity Knights guard the pools of assets, ensuring everyone can trade smoothly.
           They master the balance of supply and demand, protecting the realm’s wealth.
         </p>
-        <button onclick="selectClass('Liquidity Knight')"
-                class="mt-3 bg-blue-600 px-4 py-2 rounded hover:bg-blue-700 w-full">
+        <button
+          onclick="selectClass('Liquidity Knight')"
+          class="mt-4 w-full bg-blue-600 py-2 rounded hover:bg-blue-700 transition"
+          aria-label="Select Liquidity Knight"
+        >
           Select
         </button>
       </div>
+
+      <!-- Yield Mage -->
       <div class="border border-gray-600 p-4 rounded bg-gray-800">
-        <h2 class="text-xl">🧙 Yield Mage</h2>
-        <p class="text-xs border border-gray-600 p-2 mt-2">
+        <h2 class="text-xl mb-2">🧙 Yield Mage</h2>
+        <p class="text-xs border border-gray-600 p-2">
           Yield Mages conjure returns from thin air, dabbling in farming spells and protocol enchantments
           to generate passive income for their allies.
         </p>
-        <button onclick="selectClass('Yield Mage')"
-                class="mt-3 bg-blue-600 px-4 py-2 rounded hover:bg-blue-700 w-full">
+        <button
+          onclick="selectClass('Yield Mage')"
+          class="mt-4 w-full bg-blue-600 py-2 rounded hover:bg-blue-700 transition"
+          aria-label="Select Yield Mage"
+        >
           Select
         </button>
       </div>
+
+      <!-- Governance Rogue -->
       <div class="border border-gray-600 p-4 rounded bg-gray-800">
-        <h2 class="text-xl">🗡 Governance Rogue</h2>
-        <p class="text-xs border border-gray-600 p-2 mt-2">
+        <h2 class="text-xl mb-2">🗡 Governance Rogue</h2>
+        <p class="text-xs border border-gray-600 p-2">
           Governance Rogues slip between DAOs, casting votes in secret councils
           and steering decisions for the good (or mischief) of the realm.
         </p>
-        <button onclick="selectClass('Governance Rogue')"
-                class="mt-3 bg-blue-600 px-4 py-2 rounded hover:bg-blue-700 w-full">
+        <button
+          onclick="selectClass('Governance Rogue')"
+          class="mt-4 w-full bg-blue-600 py-2 rounded hover:bg-blue-700 transition"
+          aria-label="Select Governance Rogue"
+        >
           Select
         </button>
       </div>
+
+      <!-- Stablecoin Cleric -->
       <div class="border border-gray-600 p-4 rounded bg-gray-800">
-        <h2 class="text-xl">⛪ Stablecoin Cleric</h2>
-        <p class="text-xs border border-gray-600 p-2 mt-2">
+        <h2 class="text-xl mb-2">⛪ Stablecoin Cleric</h2>
+        <p class="text-xs border border-gray-600 p-2">
           Stablecoin Clerics bless assets with peg protection, ensuring minimal volatility
           and providing safe havens in turbulent markets.
         </p>
-        <button onclick="selectClass('Stablecoin Cleric')"
-                class="mt-3 bg-blue-600 px-4 py-2 rounded hover:bg-blue-700 w-full">
+        <button
+          onclick="selectClass('Stablecoin Cleric')"
+          class="mt-4 w-full bg-blue-600 py-2 rounded hover:bg-blue-700 transition"
+          aria-label="Select Stablecoin Cleric"
+        >
           Select
         </button>
       </div>
     </div>
   </main>
-  <footer class="mt-6 text-center text-xs">© 2025 DeFi RPG</footer>
+
+  <footer class="mt-10 text-center text-xs">© 2025 DeFi RPG</footer>
+
   <script>
     function selectClass(name) {
       localStorage.setItem('defiClass', name);
