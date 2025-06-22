@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang="en">
+<head>
+ <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <title>Reset Progress</title>
+ <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-900 text-white flex flex-col items-center justify-center min-h-screen p-6">
+  <h1 class="text-2xl font-bold mb-4">⚠️ Reset Progress?</h1>
+  <p class="mb-6 max-w-sm text-center">This will erase your character, completed quests, badges and progress.</p>
+  <div>
+    <a href="index.html" class="btn mr-3">Cancel</a>
+    <button class="btn bg-red-600 hover:bg-red-500" onclick="localStorage.clear();location.href='index.html'">Yes, Reset</button>
+  </div>
+</body>
+</html>

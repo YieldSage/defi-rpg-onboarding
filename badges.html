@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="en">
+<head>
+ <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <title>Badges Earned</title>
+ <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="css/style.css">
+ <script defer src="js/data.js"></script>
+ <script defer src="js/storage.js"></script>
+ <script defer src="js/hud.js"></script>
+ <script defer src="js/badges.js"></script>
+</head>
+<body class="bg-slate-900 text-white min-h-screen p-6">
+  <div class="rpg-hud" id="hud"></div>
+  <h1 class="text-2xl font-bold mb-4">Badges Earned</h1>
+  <div id="badgeGrid" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+
+  <template id="badgeTpl">
+    <div class="badge-tile text-center p-4 rounded-lg">
+      <img class="w-20 h-20 mx-auto mb-2" />
+      <p class="font-semibold"></p>
+    </div>
+  </template>
+</body>
+</html>
