@@ -1,0 +1,1 @@
+document.getElementById('badgeList').innerHTML = '<li>Quest 1 Complete</li>';

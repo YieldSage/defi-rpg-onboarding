@@ -1,0 +1,1 @@
+document.getElementById('hud').innerHTML = `Class: ${localStorage.getItem('class') || 'None'}<br><a href='select-character.html'>Change Class</a> | <a href='badges.html'>Badges</a>`;
